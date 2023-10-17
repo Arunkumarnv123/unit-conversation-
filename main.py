@@ -150,11 +150,12 @@ def convert():
 root = tk.Tk()
 root.title("Calcy")
 # Create a label for the title
-title_label = tk.Label(root, text="UNIT CONVERTER", font=("Arial", 26))
+title_label = tk.Label(root, text="UNIT CONVERTER", font=("Arial", 26),background="yellow")
 title_label.pack(pady=20)
+root.maxsize(400,500)
 
 # Create a label for type selection
-type_label = tk.Label(root, text="Choose the type of conversion:")
+type_label = tk.Label(root, text="Choose the type of conversion:",background="pink")
 type_label.pack()
 
 # Create a combobox for selecting the type
@@ -169,7 +170,7 @@ type_var.trace("w", update_conversion_methods)
 # Create a label for value input
 
 # Create a label for conversion method selection
-conversion_label = tk.Label(root, text="Choose the conversion method:")
+conversion_label = tk.Label(root, text="Choose the conversion method:",background="gray")
 conversion_label.pack()
 
 # Create a combobox for selecting the conversion method
@@ -177,7 +178,7 @@ conversion_var = tk.StringVar()
 conversion_combobox = ttk.Combobox(root, textvariable=conversion_var, values=())  # Start with an empty list
 conversion_combobox.pack()
 
-value_label = tk.Label(root, text="Enter a value to convert:")
+value_label = tk.Label(root, text="Enter a value to convert:",background="gray")
 value_label.pack()
 
 # Create an entry for user input
@@ -186,11 +187,11 @@ entry.pack()
 
 
 # Create a button to perform the conversion
-convert_button = tk.Button(root, text="Convert", command=convert)
+convert_button = tk.Button(root, text="Convert", command=convert,background="orange")
 convert_button.pack(pady=10)
 
 # Create a label for displaying the result
-result_label = tk.Label(root, text="Result: Select a conversion and enter a value.")
+result_label = tk.Label(root, text="Result: Select a conversion and enter a value.",background="red")
 result_label.pack()
 
 # Start the GUI main loop
