@@ -195,7 +195,8 @@ result_label.pack()
 
 # Start the GUI main loop
 root.mainloop()
-
+print("----------********--------")
+print("     without tkinter ")
 """def area():
     print("--- You chose type Area ---- ")
     print("")
